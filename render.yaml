@@ -2,5 +2,6 @@ services:
   - type: web
     name: seo-audit-ai
     env: python
-    buildCommand: "poetry install"
-    startCommand: "poetry run gunicorn --bind 0.0.0.0:$PORT app:app"
+    buildCommand: "/opt/render/project/poetry/bin/poetry install"
+    startCommand: "/opt/render/project/poetry/bin/poetry run gunicorn --bind 0.0.0.0:$PORT app:app"
+    plan: free
