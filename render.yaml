@@ -3,4 +3,5 @@ services:
     name: seo-audit-ai
     env: python
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "gunicorn -b 0.0.0.0:$PORT app:app"
+    startCommand: "gunicorn --bind 0.0.0.0:$PORT app:app"
+    plan: free
