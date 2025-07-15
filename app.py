@@ -213,6 +213,18 @@ def analyze_site(url, is_competitor=False):
         result['issues_diagram'] = diagram
     return result, None
 
+# --- BEGIN: Fix: Home route for GET / ---
+
+@app.route("/", methods=["GET"])
+def home():
+    return (
+        "<h1>SEO Audit AI is running!</h1>"
+        "<p>Send a POST request to <code>/audit</code> with JSON:<br>"
+        "<code>{'url': 'https://example.com'}</code></p>"
+    )
+
+# --- END: Fix: Home route for GET / ---
+
 @app.route('/audit', methods=['POST'])
 def audit():
     data = request.json
