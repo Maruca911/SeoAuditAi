@@ -1,11 +1,16 @@
 [tool.poetry]
 name = "seo-audit-ai"
 version = "0.1.0"
-description = "SEO Audit AI tool"
-authors = ["Maruca911 <lh@koikoi.asia>"] 
+description = ""
+authors = ["Your Name <lh@koikoi.asia>"]
+package-mode = false
 
 [tool.poetry.dependencies]
-python = "^3.12"
-flask = "^3.0.0"
-matplotlib = "^3.8.0"
+python = "^3.13"
+flask = "^3.1.1"
+matplotlib = "^3.10.3"
 gunicorn = "^23.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
